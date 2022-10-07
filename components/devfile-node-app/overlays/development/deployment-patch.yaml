@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  name: devfile-node-app
+  namespace: karthik
+spec:
+  selector: {}
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+    spec:
+      containers:
+      - env:
+        - name: env
+          value: development
+        image: quay.io/karthik_jk/devfile-node-app@sha256:d9ea18255dc8d862570e3632fd9459d51d1b011e514bca60fa74dfdcfb29d6b0
+        name: container-image
+        resources: {}
+status: {}
